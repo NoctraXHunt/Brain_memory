@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain memory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Brain memory</h1>
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span>Moves</span>
+                <span id="moves" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Time</span>
+                <span id="timer" class="stat-value">00:00</span>
+            </div>
+            <div class="stat-item">
+                <div class="btn" style="margin:0; padding: 5px 15px; font-size: 0.8rem;" onclick="restartGame()">Restart</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-board" id="gameBoard">
+        </div>
+
+    <div class="overlay" id="winOverlay">
+        <div class="modal">
+            <h2 style="margin-bottom: 10px; font-size: 2rem;">System Synced!</h2>
+            <p style="color: #94a3b8; margin-bottom: 15px;">Brain capacity verified.</p>
+            <p>Moves: <span id="finalMoves" style="color: var(--accent-secondary); font-weight: bold;"></span></p>
+            <p>Time: <span id="finalTime" style="color: var(--accent-secondary); font-weight: bold;"></span></p>
+            <button class="btn" onclick="restartGame()">Reboot System</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
